@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppElement render should return the template 1`] = `
+TemplateResult {
+  "processor": DefaultTemplateProcessor {},
+  "strings": Array [
+    "
+      <sz-header></sz-header>
+
+      <div>Counter: ",
+    "</div>
+
+      <div id=\\"outlet\\"></div>
+    ",
+  ],
+  "type": "html",
+  "values": Array [
+    0,
+  ],
+}
+`;
+
+exports[`AppElement triggerIncrement should call store.dispatch with increment 1`] = `
+Array [
+  Object {
+    "error": undefined,
+    "meta": undefined,
+    "payload": undefined,
+    "type": "[Counter] Increment",
+  },
+]
+`;

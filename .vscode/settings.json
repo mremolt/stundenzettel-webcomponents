@@ -1,0 +1,30 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    }
+  ],
+  "jest.autoEnable": false,
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "html",
+    "javascriptreact",
+    "typescript",
+    "plaintext",
+    "markdown",
+    "HTML (Eex)"
+  ],
+  "eslint.enable": true
+}

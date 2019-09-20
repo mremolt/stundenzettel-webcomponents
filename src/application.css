@@ -1,0 +1,10 @@
+body {
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666;
+  margin: 0px;
+
+  --theme-active-background-color: #008cba;
+  --theme-active-color: #fff;
+  --theme-card-background-color: #f3f3f3;
+}

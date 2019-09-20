@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`counter actions add returns the correct action 1`] = `
+Object {
+  "error": undefined,
+  "meta": undefined,
+  "payload": 2,
+  "type": "[Counter] Add",
+}
+`;
+
+exports[`counter actions decrement returns the correct action 1`] = `
+Object {
+  "error": undefined,
+  "meta": undefined,
+  "payload": undefined,
+  "type": "[Counter] Decrement",
+}
+`;
+
+exports[`counter actions increment returns the correct action 1`] = `
+Object {
+  "error": undefined,
+  "meta": undefined,
+  "payload": undefined,
+  "type": "[Counter] Increment",
+}
+`;
