@@ -56,10 +56,13 @@
     "workbox-webpack-plugin": "^4.3.1"
   },
   "dependencies": {
+    "@formatjs/intl-pluralrules": "^1.2.0",
     "@vaadin/router": "^1.4.3",
     "autobind-decorator": "^2.4.0",
     "date-fns": "^2.2.1",
     "flat": "^4.1.0",
+    "intl-format-cache": "^4.2.0",
+    "intl-messageformat": "^7.3.0",
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2",
     "object-path-immutable": "^3.1.1",

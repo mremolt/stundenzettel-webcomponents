@@ -1,4 +1,4 @@
-import { CSSResult, LitElement, TemplateResult, css, customElement, html } from 'lit-element';
+import { CSSResult, LitElement, TemplateResult, customElement, html } from 'lit-element';
 import { addMonths, format, isWeekend, subMonths } from 'date-fns';
 import { boundMethod } from 'autobind-decorator';
 import { classMap } from 'lit-html/directives/class-map';
@@ -8,6 +8,8 @@ import { REDUX_STORE, TIMESHEET_API_SERVICE } from '../tokens';
 import { container } from '../ioc/container';
 import { minutesToTimeString } from '../utils/time';
 
+import '../elements/button.element';
+import '../elements/link-button.element';
 import { RootState } from '../store/root.reducer';
 import { TimesheetDto, TimesheetItem } from '../models/timesheet-item.interface';
 import { connect } from '../store/store';
@@ -18,51 +20,17 @@ import {
   selectLoaded,
   selectTimesheetItems,
 } from '../store/timesheet/timesheet.selectors';
+import { t } from '../utils/intl';
+import { withTranslations } from '../services/translation.mixin';
 
-import '../elements/button.element';
-import '../elements/link-button.element';
+import { STYLES } from './styles';
 
 type InputType = 'text' | 'time';
 
 @customElement('sz-month-view')
-export class MonthViewElement extends connect(LitElement) {
+export class MonthViewElement extends withTranslations(connect(LitElement)) {
   public static get styles(): CSSResult {
-    return css`
-      :host {
-        display: block;
-      }
-
-      table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-
-      th,
-      td {
-        border: 1px solid #ddd;
-        padding: 8px;
-      }
-
-      tr:nth-child(even) {
-        background-color: var(--theme-card-background-color);
-      }
-
-      tr.weekend {
-        background-color: #999;
-      }
-
-      th {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: left;
-        background-color: var(--theme-active-background-color);
-        color: var(--theme-active-color);
-      }
-
-      input:invalid {
-        border: 1px dashed red;
-      }
-    `;
+    return STYLES;
   }
 
   /**
@@ -114,10 +82,10 @@ export class MonthViewElement extends connect(LitElement) {
         <table>
           <thead>
             <tr>
-              <th>Date</th>
-              <th>Start</th>
-              <th>End</th>
-              <th>Break</th>
+              <th>${t('Date')}</th>
+              <th>${t('Start')}</th>
+              <th>${t('End')}</th>
+              <th>${t('Break')}</th>
               <th>Full time</th>
               <th>Internal time</th>
               <th>Project 1</th>

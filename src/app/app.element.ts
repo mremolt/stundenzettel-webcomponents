@@ -11,9 +11,10 @@ import { connect } from './store/store';
 import { container } from './ioc/container';
 import { increment } from './store/counter/counter.actions';
 import { selectValue } from './store/counter/counter.selectors';
+import { withTranslations } from './services/translation.mixin';
 
 @customElement('sz-app')
-export class AppElement extends connect(LitElement) {
+export class AppElement extends withTranslations(connect(LitElement)) {
   public static get styles(): CSSResult {
     return css`
       :host {

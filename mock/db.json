@@ -78,6 +78,21 @@
       "workTime": 545,
       "internalWorkTime": 0,
       "projectTime": 545
+    },
+    "2019-09-04": {
+      "id": 0,
+      "date": "2019-09-04",
+      "start": "08:15",
+      "end": "17:10",
+      "break": "00:50",
+      "projects": [
+        "05:00"
+      ],
+      "comment": "",
+      "presentTime": 535,
+      "workTime": 485,
+      "internalWorkTime": 185,
+      "projectTime": 300
     }
   }
 }

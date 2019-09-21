@@ -1,4 +1,4 @@
-import { CSSResult, LitElement, TemplateResult, css, customElement, html, property } from 'lit-element';
+import { CSSResult, LitElement, TemplateResult, customElement, html, property } from 'lit-element';
 import { addDays, format, startOfDay, subDays } from 'date-fns';
 
 import { unflatten } from 'flat';
@@ -15,36 +15,12 @@ import { container } from '../ioc/container';
 import { fetchAsync, setCurrentDay, update } from '../store/timesheet/timesheet.actions';
 import { selectCurrentTimesheetItem, selectEntities, selectLoaded } from '../store/timesheet/timesheet.selectors';
 
+import { STYLES } from './styles';
+
 @customElement('sz-day-view')
 export class DayViewElement extends connect(LitElement) {
   public static get styles(): CSSResult {
-    return css`
-      :host {
-        display: block;
-      }
-
-      .form-group {
-        display: flex;
-        justify-content: flex-end;
-        padding: 0.5em;
-      }
-
-      .form-group > label {
-        padding: 0.5em 1em 0.5em 0;
-        flex: 1;
-      }
-      .form-group > input {
-        flex: 2;
-      }
-
-      .form-group > input:focus {
-        border: 1px solid var(--theme-active-background-color);
-      }
-
-      .form-group > input:invalid {
-        border: 1px dashed red;
-      }
-    `;
+    return STYLES;
   }
 
   /**
