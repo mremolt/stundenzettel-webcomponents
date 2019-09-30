@@ -1,5 +1,5 @@
 import { ActionType, getType } from 'typesafe-actions';
-import immutable from 'object-path-immutable';
+import { set } from 'object-path-immutable';
 
 import { TimesheetDto } from '../../models/timesheet-item.interface';
 
@@ -58,7 +58,7 @@ export const timesheet = (state: TimesheetState = initialState, action: Timeshee
     case getType(actions.updateProject): {
       const key = action.payload.date;
       const index = String(action.payload.index);
-      const currentItem = immutable.set(ensureItem(state, key), ['projects', index], action.payload.value);
+      const currentItem = set(ensureItem(state, key), ['projects', index], action.payload.value);
 
       return { ...state, entities: { ...state.entities, [key]: currentItem }, dirty: true };
     }

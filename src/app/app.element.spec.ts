@@ -1,7 +1,8 @@
 import configureStore, { MockStore } from 'redux-mock-store';
 
 import { AppElement } from './app.element';
-import { REDUX_STORE } from './tokens';
+import { REDUX_STORE, TRANSLATION_SERVICE } from './tokens';
+import { TranslationService } from './services/translation.service';
 import { container } from './ioc/container';
 
 describe('AppElement', () => {
@@ -11,6 +12,7 @@ describe('AppElement', () => {
   beforeAll(() => {
     store = configureStore()({});
     container.provide(REDUX_STORE, () => store);
+    container.provide(TRANSLATION_SERVICE, () => new TranslationService());
   });
 
   beforeEach(() => {

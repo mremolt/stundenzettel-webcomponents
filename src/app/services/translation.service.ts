@@ -37,7 +37,6 @@ export class TranslationService {
     this.locale = locale;
     this.cache = {};
     this.localeChanged.dispatchEvent(new CustomEvent(LOCALE_CHANGED_EVENT, { detail: { locale } }));
-    console.log('locale', locale);
   }
 
   private getFormatter(key: string): IntlMessageFormat {

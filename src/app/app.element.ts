@@ -50,7 +50,7 @@ export class AppElement extends withTranslations(connect(LitElement)) {
   public connectedCallback(): void {
     super.connectedCallback();
 
-    // setInterval(this.triggerIncrement.bind(this), 1500);
+    setInterval(this.triggerIncrement.bind(this), 1500);
   }
 
   public firstUpdated(): void {
