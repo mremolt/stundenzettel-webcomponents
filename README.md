@@ -1,6 +1,6 @@
-# Webcomponents starter
+# Webcomponents Demo Project
 
-Demo app for developing SPAs based on Web Components. 
+Demo app for developing SPAs based on Web Components, an Excel like timesheet. 
 Just for demo purposes, no production ready code. 
 
 ## Installation
